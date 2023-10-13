@@ -1,31 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Calculator</title>
+    <script src="./app.js" defer></script>
+    <title>js-calculator-v1</title>
 </head>
 <body>
-    <div class="calculator">
-        <h1>Калькулятор</h1>
-        <div class="input-container">
-            <input class="input" type="number" placeholder="Введите первое число">
-            <input class="input" type="number" placeholder="Введите второе число">
-        </div>
-        <div class="button-container">
-            <button class="button">+</button>
-            <button class="button">-</button>
-            <button class="button">*</button>
-            <button class="button">/</button>
-            <button class="button">=</button>
-        </div>
-        <div class="result-container">
-            <h4>Результат:</h4>
-            <span></span>
-        </div>
+<div class="calculator">
+    <h1 class="title">Кальулятор</h1>
+    <div class="input-container">
+        <input id="input1" class="input" type="number" placeholder="Введите первое число">
+        <input id="input2" class="input" type="number" placeholder="Введите второе число">
     </div>
+
+    <div id="js-actions" class="button-container">
+        <button class="button" data-action="plus" id="plus">+</button>
+        <button class="button" data-action="minus" id="minus">-</button>
+        <button class="button" data-action="mult" id="multiplication">*</button>
+        <button class="button" data-action="div" id="division">/</button>
+        <button class="button button--light" data-action="equal" id="submit">=</button>
+    </div>
+
+    <div class="result-container">
+        <h4>Результат:</h4>
+        <p id="result"></p>
+    </div>
+</div>
 </body>
 </html>
